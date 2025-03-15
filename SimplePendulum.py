@@ -1,11 +1,17 @@
+"""
+File: SimplePendulum.py
+Author: Raul G. Quartieri
+Date: 15/03/2025
+Description: This script creates a simple simulation of the motion of the Simple Pendulum.
+             The equation that governs the motion of this type of pendulum is given by:
+             \frac{d^2\theta}{dt^2} + \frac{g}{l} \sin(\theta) = 0
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from scipy.integrate import solve_ivp # numerically integrates a system of ODE given an initial value: dy / dt = f(t, y), y(t0) = y0
 
-# numerically integrates a system of ODE given an initial value: dy / dt = f(t, y), y(t0) = y0
-from scipy.integrate import solve_ivp 
-
-# Constants
 g = 9.81 # gravity (m/s^2)
 l = 5 # length of rod (m)
 
@@ -24,14 +30,11 @@ t_eval = np.linspace(0, 10, 500)
 
 # Solve the ODE
 sol = solve_ivp(SimplePendulum, t_span, y0, t_eval=t_eval)
-
-# Solution
 theta = sol.y[0]
 
-# Convert to Cartesian coordinates for visualization
+# Convert to Cartesian coordinates
 x1 = l * np.sin(theta)
 y1 = -l * np.cos(theta)
-
 
 # Creating animation
 fig, ax = plt.subplots(figsize=(10, 10))
