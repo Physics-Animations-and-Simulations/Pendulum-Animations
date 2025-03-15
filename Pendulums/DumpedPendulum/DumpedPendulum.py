@@ -59,6 +59,3 @@ ani = animation.FuncAnimation(fig, update, frames=len(time), init_func=init, bli
 plt.title("Dumped Pendulum Animation")
 ani.save("Pendulums/DumpedPendulum/dumped_pendulum.gif", writer="pillow", fps=30)
 #plt.show()
-
-
-    
