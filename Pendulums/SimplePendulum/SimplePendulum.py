@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from scipy.integrate import solve_ivp # numerically integrates a system of ODE given an initial value: dy / dt = f(t, y), y(t0) = y0
 
-g = 9.81 # gravity (m/s^2)
-l = 5 # length of rod (m)
+g = 9.81    # gravity (m/s^2)
+l = 5       # length of rod (m)
 
 def SimplePendulum(t, y):
     theta, z = y
@@ -25,8 +25,8 @@ def SimplePendulum(t, y):
 y0 = [np.pi/2, 0]  #[initial angle and initial velocity]
 
 # Time span for simulation
-t_span = (0, 10)
-t_eval = np.linspace(0, 10, 500)
+t_span = (0, 50)
+t_eval = np.linspace(0, 50, 500)
 
 # Solve the ODE
 sol = solve_ivp(SimplePendulum, t_span, y0, t_eval=t_eval)
@@ -59,5 +59,5 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=len(t_eval), init_func=init, blit=True, interval=20)
 plt.title("Simple Pendulum Animation")
-ani.save("Physics_Simulations/Animations/simple_pendulum.gif", writer="pillow", fps=30)
+ani.save("Pendulums/SimplePendulum/simple_pendulum.gif", writer="pillow", fps=30)
 #plt.show()
