@@ -16,7 +16,7 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 800
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Interactive Double Pendulum")
+pygame.display.set_caption("Interactive Simple Pendulum")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
