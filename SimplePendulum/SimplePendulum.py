@@ -2,7 +2,7 @@
 File: SimplePendulum.py
 Author: Raul G. Quartieri
 Date: 15/03/2025
-Description: This script creates a simple simulation of the motion of the Simple Pendulum.
+Description: This script creates a simple animation of the motion of the Simple Pendulum.
              The equation that governs the motion of this type of pendulum is given by:
              \frac{d^2\theta}{dt^2} + \frac{g}{l} \sin(\theta) = 0
 """
@@ -59,5 +59,5 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=len(t_eval), init_func=init, blit=True, interval=20)
 plt.title("Simple Pendulum Animation")
-ani.save("Pendulums/SimplePendulum/simple_pendulum.gif", writer="pillow", fps=30)
+ani.save("SimplePendulum/simple_pendulum.gif", writer="pillow", fps=30)
 #plt.show()
