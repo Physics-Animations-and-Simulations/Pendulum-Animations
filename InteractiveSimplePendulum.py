@@ -2,7 +2,7 @@
 File: DumpedPendulum.py
 Author: Raul G. Quartieri
 Date: 15/03/2025
-Description: This script creates a simple animation of the motion of the Damped Pendulum.
+Description: This script creates a simple animation of the motion of the Simple Pendulum.
              The equation that governs the motion of this type of pendulum is given by:
              \frac{d^2\theta}{dt^2} + \frac{b}{m l^2} \frac{d\theta}{dt} + \frac{g}{l} \sin(\theta) = 0
 """
