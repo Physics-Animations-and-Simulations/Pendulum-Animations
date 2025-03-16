@@ -86,5 +86,3 @@ ani.save("DoublePendulum/double_pendulum.gif", writer="pillow", fps=30)
 # If use the damped version
 #plt.title("Damped Double Pendulum Animation")
 #ani.save("DoublePendulum/damped_double_pendulum.gif", writer="pillow", fps=30)
-
-
