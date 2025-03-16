@@ -137,15 +137,15 @@ while running:
         if event.type == pygame.MOUSEMOTION and dragging:
             mouse_x, _ = event.pos
             if dragging == "m1":
-                m1 = np.clip((mouse_x - slider_m1.x) / slider_m1.width * 5.0, 0.01, 10.0)
+                m1 = np.clip((mouse_x - slider_m1.x) / slider_m1.width * 10.0, 0.01, 10.0) 
             elif dragging == "l1":
-                l1 = np.clip((mouse_x - slider_l1.x) / slider_l1.width * 5.0, 0.01, 10.0)
+                l1 = np.clip((mouse_x - slider_l1.x) / slider_l1.width * 10.0, 0.01, 10.0)
             elif dragging == "c1":
                 c1 = np.clip((mouse_x - slider_c1.x) / slider_c1.width * 1.0, 0.0, 1.0)
             elif dragging == "m2":
-                m2 = np.clip((mouse_x - slider_m2.x) / slider_m2.width * 5.0, 0.01, 10.0)
+                m2 = np.clip((mouse_x - slider_m2.x) / slider_m2.width * 10.0, 0.01, 10.0)
             elif dragging == "l2":
-                l2 = np.clip((mouse_x - slider_l2.x) / slider_l2.width * 5.0, 0.01, 10.0)
+                l2 = np.clip((mouse_x - slider_l2.x) / slider_l2.width * 10.0, 0.01, 10.0)
             elif dragging == "c2":
                 c2 = np.clip((mouse_x - slider_c2.x) / slider_c2.width * 1.0, 0.0, 1.0)
 
