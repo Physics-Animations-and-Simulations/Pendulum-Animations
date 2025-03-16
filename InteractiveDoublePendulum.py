@@ -1,3 +1,15 @@
+"""
+File: DoublePendulum.py
+Author: Raul G. Quartieri
+Date: 16/03/2025
+Description: This script creates an animation of the motion of the Double Pendulum.
+             The equations that governs the motion of this type of pendulum is given by:
+             \ddot{\theta}_1 = \frac{1}{\det(\mathbf{M})} \left[ m_2 l_2^2 \left( -m_2 l_1 l_2 \dot{\theta}_2^2 \sin(\theta_1 - \theta_2) - (m_1 + m_2) g l_1 \sin \theta_1 - c_1 \dot{\theta}_1 \right) - m_2 l_1 l_2 \cos(\theta_1 - \theta_2) \left( m_2 l_1 l_2 \dot{\theta}_1^2 \sin(\theta_1 - \theta_2) - m_2 g l_2 \sin \theta_2 - c_2 \dot{\theta}_2 \right) \right]
+             \ddot{\theta}_2 = \frac{1}{\det(\mathbf{M})} \left[ -m_2 l_1 l_2 \cos(\theta_1 - \theta_2) \left( -m_2 l_1 l_2 \dot{\theta}_2^2 \sin(\theta_1 - \theta_2) - (m_1 + m_2) g l_1 \sin \theta_1 - c_1 \dot{\theta}_1 \right) + (m_1 + m_2) l_1^2 \left( m_2 l_1 l_2 \dot{\theta}_1^2 \sin(\theta_1 - \theta_2) - m_2 g l_2 \sin \theta_2 - c_2 \dot{\theta}_2 \right) \right]
+             \det(\mathbf{M}) = (m_1 + m_2) l_1^2 \cdot m_2 l_2^2 - (m_2 l_1 l_2 \cos(\theta_1 - \theta_2))^2.
+             
+"""
+
 import pygame
 import numpy as np
 from scipy.integrate import solve_ivp
